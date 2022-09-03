@@ -1,0 +1,58 @@
+<div class="container">
+    <form name="createEmployeeForm" #createEmployeeForm="ngForm">
+        <div class="text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Create Employee</h4>
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-name">First Name</label>
+            <input type="text" id="firstName" [(ngModel)]="employee.firstName" required #firstName="ngModel" name="firstName" class="form-control validate">
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">Last Name</label>
+            <input type="text" id="lastName" ngModel required [(ngModel)]="employee.lastName" #lastName="ngModel" name="lastName" class="form-control validate">
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">Email</label>
+            <input type="text" id="email" ngModel required [(ngModel)]="employee.email" #email="ngModel" name="email" class="form-control validate">
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">Mobile</label>
+            <input type="text" id="mobile" ngModel required [(ngModel)]="employee.mobile" #mobile="ngModel" name="mobile" class="form-control validate">
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">Address</label>
+            <input type="text" id="address" ngModel required [(ngModel)]="employee.address" #address="ngModel" name="address" class="form-control validate">
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">City</label>
+            <select class="browser-default custom-select">
+             <option selected>Select city</option>
+            <option value="1">Bangalore</option>
+            <option value="2">Delhi</option>
+            <option value="3">Chennai</option>
+            </select>
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <label data-error="wrong" data-success="right" for="defaultForm-lastname">Gender</label>
+            <div class="form-check form-check-inline">
+                <input mdbRadio class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input mdbRadio class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+
+        </div>
+        <div class="md-form mb-2 col-md-6">
+            <a (click)="saveEmployee(createEmployeeForm)" class="btn btn-success fRight m-10">Save</a>
+        </div>
+    </form>
+</div>
